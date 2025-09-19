@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "ENS Resolver",
+  "version": "1.0",
+  "description": "Right-click an ENS name to view wallet on Debank",
+  "permissions": ["contextMenus", "scripting", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": ["https://api.ensideas.com/*", "https://api.ens.domains/*", "https://debank.com/*"],
+  "web_accessible_resources": [
+    {
+      "resources": ["assests/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "assests/16.png",
+    "32": "assests/32.png",
+    "256": "assests/256.png"
+  }
+}
