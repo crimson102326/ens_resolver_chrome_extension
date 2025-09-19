@@ -1,0 +1,23 @@
+{
+	"name": "ens-resolver",
+	"version": "1.0.0",
+	"description": "ENS Resolver",
+	"main": "background.js",
+	"scripts": {
+		"build": "echo No build needed for this extension"
+	},
+	"author": "Daniel Luiz",
+	"license": "MIT",
+	"devDependencies": {},
+	"dependencies": {
+		"dotenv": "^17.2.2",
+		"ethers": "^6.15.0"
+	},
+	"keywords": [
+		"chrome",
+		"extension",
+		"ens",
+		"debank"
+	],
+	"packageManager": "pnpm@10.17.0"
+}
