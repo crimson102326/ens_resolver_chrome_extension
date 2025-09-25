@@ -89,8 +89,12 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
       
       if (address) {
         // Open Debank profile page
-        const debankUrl = `https://debank.com/profile/${address}`;
-        chrome.tabs.create({ url: debankUrl });
+        const debankUrl = `https://debank.com/profile/${address}?from=${selectedText}`;
+        chrome.tabs.create({ 
+          url: debankUrl, 
+          index: tab.index + 1,
+          active: false 
+        });
       } else {
         // Show error message
         chrome.scripting.executeScript({
